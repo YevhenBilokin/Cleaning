@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontakt – Cortix Rengøring</title>
+  <meta name="description" content="Kontakt Cortix Rengøring. Send en forespørgsel eller ring. Sjælland og Lolland-Falster." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container navwrap">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brandText">
+          <b>Cortix Rengøring</b>
+          <small>Sjælland • Lolland-Falster</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Hovednavigation">
+        <a href="index.html#ydelser">Ydelser</a>
+        <a href="index.html#priser">Priser</a>
+        <a href="index.html#omrade">Område</a>
+        <a href="index.html#kalkulator">Prisberegner</a>
+        <a href="faq.html">FAQ</a>
+        <a class="pillLink active" href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <div class="navActions">
+        <a class="btn ghost" href="tel:+4571317815">Ring nu</a>
+        <a class="btn primary" href="#form">Send besked</a>
+        <button class="iconBtn" id="burger" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="container">
+        <a href="index.html#ydelser">Ydelser</a>
+        <a href="index.html#priser">Priser</a>
+        <a href="index.html#omrade">Område</a>
+        <a href="index.html#kalkulator">Prisberegner</a>
+        <a href="kontakt.html">Kontakt</a>
+        <div class="mobileCTA">
+          <a class="btn ghost" href="tel:+4571317815">Ring nu</a>
+          <a class="btn primary" href="#form">Send besked</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pageHero">
+      <div class="container pageGrid">
+        <div class="reveal">
+          <div class="kicker">
+            <span class="tag">Kontakt</span>
+            Hurtigt svar på mail/SMS
+          </div>
+          <h1>Kontakt os</h1>
+          <p class="lead">
+            Send adresse + m² + ønsket dato, så svarer vi hurtigt med et uforpligtende tilbud.
+          </p>
+
+          <div class="infoCards">
+            <div class="infoCard">
+              <b>Telefon</b>
+              <a href="tel:+4571317815">+45 71 31 78 15</a>
+            </div>
+            <div class="infoCard">
+              <b>Email</b>
+              <span>kontakt@ditdomæne.dk</span>
+            </div>
+            <div class="infoCard">
+              <b>CVR</b>
+              <span>45675963</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal" id="form">
+          <h2>Kontaktformular (demo)</h2>
+          <p class="muted">Ingen backend endnu — knappen viser “Sendt” og kan senere kobles til mail/CRM.</p>
+
+          <form class="form" id="contactForm">
+            <div class="field">
+              <label for="cName">Navn</label>
+              <input id="cName" type="text" placeholder="Dit navn" required />
+            </div>
+            <div class="field">
+              <label for="cPhone">Telefon</label>
+              <input id="cPhone" type="tel" placeholder="+45 ..." required />
+            </div>
+            <div class="field">
+              <label for="cEmail">Email</label>
+              <input id="cEmail" type="email" placeholder="navn@email.dk" required />
+            </div>
+            <div class="field">
+              <label for="cMsg">Besked</label>
+              <textarea id="cMsg" rows="5" placeholder="Adresse, m², dato, særlige ønsker..." required></textarea>
+            </div>
+
+            <button class="btn primary w100" type="submit">Send</button>
+            <div class="formStatus" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footGrid">
+        <div>
+          <div class="brand footBrand">
+            <span class="logo" aria-hidden="true"></span>
+            <span class="brandText">
+              <b>Cortix Rengøring</b>
+              <small>Sjælland • Lolland-Falster</small>
+            </span>
+          </div>
+          <p class="footText">Professionel rengøring med fokus på kvalitet, punktlighed og tydelige aftaler.</p>
+        </div>
+
+        <div>
+          <h4>Links</h4>
+          <a href="index.html">Forside</a><br/>
+          <a href="index.html#ydelser">Ydelser</a><br/>
+          <a href="index.html#kalkulator">Prisberegner</a>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <a href="flytterengoring.html">Flytterengøring</a><br/>
+          <a href="erhvervsrengoring.html">Erhvervsrengøring</a>
+        </div>
+
+        <div>
+          <h4>Kontakt</h4>
+          <a href="tel:+4571317815">+45 71 31 78 15</a><br/>
+          <span>kontakt@ditdomæne.dk</span><br/>
+          <span>CVR: 45675963</span>
+        </div>
+      </div>
+
+      <div class="container subfoot">
+        <span>© <span id="year"></span> Cortix. Alle rettigheder forbeholdes.</span>
+        <span>Website developed by Cortix Digital</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
