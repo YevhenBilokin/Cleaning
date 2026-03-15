@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontakt – Cortix Rengøring</title>
+  <meta name="description" content="Kontakt Cortix Rengøring for tilbud på flytterengøring, erhvervsrengøring eller privat rengøring." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container navwrap">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brandText">
+          <b>Cortix Rengøring</b>
+          <small>Sjælland • Lolland-Falster</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Hovednavigation">
+        <a href="index.html#ydelser">Ydelser</a>
+        <a href="index.html#priser">Priser</a>
+        <a href="faq.html">FAQ</a>
+        <a class="pillLink active" href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <div class="navActions">
+        <a class="btn ghost" href="tel:+4571317815">Ring nu</a>
+        <a class="btn primary" href="#form">Send besked</a>
+        <button class="iconBtn" id="burger" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="container">
+        <a href="index.html#ydelser">Ydelser</a>
+        <a href="index.html#priser">Priser</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html">Kontakt</a>
+        <div class="mobileCTA">
+          <a class="btn ghost" href="tel:+4571317815">Ring nu</a>
+          <a class="btn primary" href="#form">Send besked</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pageHero">
+      <div class="container pageGrid">
+        <div class="reveal">
+          <div class="kicker">
+            <span class="tag">Kontakt</span>
+            Hurtigt svar på mail eller telefon
+          </div>
+          <h1>Kontakt os</h1>
+          <p class="lead">
+            Send gerne adresse, ca. m², ønsket dato og eventuelle særlige ønsker — så vender vi hurtigt tilbage med et tilbud.
+          </p>
+
+          <div class="infoCards">
+            <div class="infoCard">
+              <b>Telefon</b>
+              <a href="tel:+4571317815">+45 71 31 78 15</a>
+            </div>
+            <div class="infoCard">
+              <b>Email</b>
+              <span>kontakt@ditdomæne.dk</span>
+            </div>
+            <div class="infoCard">
+              <b>CVR</b>
+              <span>45675963</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal" id="form">
+            <h2>Få et tilbud</h2>
+            <p class="muted">
+              Send gerne adresse, ca. m², ønsket dato og eventuelle særlige ønsker.
+              Vi vender tilbage hurtigst muligt.
+            </p>
+          <form
+            class="form"
+            id="contactForm"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+                  <input type="hidden" name="form-name" value="contact" />
+
+                  <p class="hiddenTrap">
+                    <label>Do not fill this out: <input name="bot-field" /></label>
+                  </p>
+
+                  <div class="field">
+                    <label for="cName">Navn</label>
+                    <input id="cName" name="name" type="text" placeholder="Dit navn" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="cPhone">Telefon</label>
+                    <input id="cPhone" name="phone" type="tel" placeholder="+45 ..." required />
+                  </div>
+
+                  <div class="field">
+                    <label for="cEmail">Email</label>
+                    <input id="cEmail" name="email" type="email" placeholder="navn@email.dk" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="cMsg">Besked</label>
+                    <textarea id="cMsg" name="message" rows="5" placeholder="Adresse, m², dato og særlige ønsker..." required></textarea>
+                  </div>
+
+                  <button class="btn primary w100" type="submit">Send</button>
+          </form>
+
+<div class="formSuccess hidden" id="formSuccess">
+  <div class="successBadge">Tak</div>
+  <h3>Vi har modtaget din besked</h3>
+  <p>
+    Tak for din henvendelse. Vi vender tilbage hurtigst muligt.
+  </p>
+  <div class="inlineActions">
+    <a class="btn primary" href="index.html">Til forsiden</a>
+    <button class="btn ghost" type="button" id="sendAnotherBtn">Send en ny besked</button>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container subfoot">
+        <span>© <span id="year"></span> Cortix. Alle rettigheder forbeholdes.</span>
+        <span><a href="index.html">Til forsiden</a></span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
